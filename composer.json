@@ -1,0 +1,52 @@
+{
+    "name": "macsidigital/laravel-cookie-consent",
+    "description": "Laravel cookie consent package",
+    "homepage": "https://github.com/MacsiDigital/laravel-cookie-consent",
+    "keywords": ["macsidigital", "laravel-cookie-consent", "cookie-consent", "laravel", "api", "client"],
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Colin Hall",
+            "email": "colin@macsi.co.uk",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.3",
+        "illuminate/support": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "MacsiDigital\\CookieConsent\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "MacsiDigital\\CookieConsent\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "MacsiDigital\\CookieConsent\\Providers\\CookieConsentServiceProvider"
+            ],
+            "aliases": {
+                "Boilerplate": "MacsiDigital\\CookieConsent\\Facades\\Boilerplate"
+            }
+        }
+    },
+    "minimum-stability" : "dev"
+}
