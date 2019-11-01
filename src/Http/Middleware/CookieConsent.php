@@ -18,7 +18,7 @@ class CookieConsent
             }
         }
         app('view')->share('consent_required', $consent_required);
-        
-        $response = $next($request);
+
+        return $next($request);
     }
 }
