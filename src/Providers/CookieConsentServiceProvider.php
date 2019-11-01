@@ -44,6 +44,7 @@ class CookieConsentServiceProvider extends ServiceProvider
                 InstallCommand::class,
             ]);
         }
+        app('router')->pushMiddlewareToGroup('web', \MacsiDigital\CookieConsent\Http\Middleware\CookieConsent::class);
     }
 
     /**
@@ -51,19 +52,7 @@ class CookieConsentServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->registerViewShare();
-    }
-
-    protected function registerViewShare()
-    {
-        $consent_required = false;
-        if (config('cookie-consent.enabled')){
-            $cookieName = config('cookie-consent.cookie_name');
-            if(! Cookie::has($cookieName)){
-                $consent_required = true;
-            }
-        }
-        app('view')->share('consent_required', $consent_required);
+        
     }
 
 }
