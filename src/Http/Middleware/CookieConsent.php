@@ -4,7 +4,6 @@ namespace MacsiDigital\CookieConsent\Http\Middleware;
 
 use Closure;
 use Illuminate\Http\Response;
-use Illuminate\Support\Facades\Cookie;
 
 class CookieConsent
 {
@@ -13,7 +12,7 @@ class CookieConsent
         $consent_required = false;
         if (config('cookie-consent.enabled')){
             $cookieName = config('cookie-consent.cookie_name');
-            if(! Cookie::has($cookieName)){
+            if(! $request->cookies->has($cookieName)){
                 $consent_required = true;
             }
         }
