@@ -2,15 +2,10 @@
 
 namespace MacsiDigital\CookieConsent\Console\Commands;
 
-use Illuminate\Support\Str;
 use Illuminate\Console\Command;
-use Illuminate\Support\Facades\Schema;
-use Illuminate\Support\Facades\Artisan;
-use Illuminate\Console\DetectsApplicationNamespace;
 
 class InstallCommand extends Command
 {
-    use DetectsApplicationNamespace;
 
     /**
      * The name and signature of the console command.

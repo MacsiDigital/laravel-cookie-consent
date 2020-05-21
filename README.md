@@ -22,6 +22,14 @@ php artisan cookieconsent:install
 
 This will publish a config file, the views and language files
 
+## AJAX Requests and Styling
+
+Out of the box we use axios to make the AJAX request, this can be changed by editing the blade template.
+
+We also use Tailwind CSS for styling, again this can be changed by editing the template.
+
+If you want to use the defaults, then you will need to import the required dependencies.
+
 ## Usage
 
 To use we just need to add a blade include just before the end body tag

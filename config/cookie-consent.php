@@ -16,4 +16,14 @@ return [
      * Cookie duration in minutes. Default is 60 * 24 * 365 * 5. (5 years)
      */
     'cookie_duration' => 60 * 24 * 365 * 5,
+
+    /*
+     * Banner position, either top or bottom
+     */
+    'banner_position' => 'bottom',
+    
+    /*
+     * URL to the cookie policy
+     */
+    'cookie_policy_url' => '/cookie-policy',
 ];
