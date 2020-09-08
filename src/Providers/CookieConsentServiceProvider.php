@@ -2,9 +2,6 @@
 
 namespace MacsiDigital\CookieConsent\Providers;
 
-use Illuminate\Support\Str;
-use Illuminate\Filesystem\Filesystem;
-use Illuminate\Support\Facades\Cookie;
 use Illuminate\Support\ServiceProvider;
 use MacsiDigital\CookieConsent\Console\Commands\InstallCommand;
 
@@ -52,7 +49,5 @@ class CookieConsentServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        
     }
-
 }

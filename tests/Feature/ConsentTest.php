@@ -2,9 +2,8 @@
 
 namespace MacsiDigital\CookieConsent\Test\Feature;
 
-use MacsiDigital\CookieConsent\Test\TestCase;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use MacsiDigital\CookieConsent\Http\Middleware\CookieConsent;
+use MacsiDigital\CookieConsent\Test\TestCase;
 
 class ConsentTest extends TestCase
 {
@@ -19,7 +18,9 @@ class ConsentTest extends TestCase
     /** @test */
     public function it_can_display_a_cookie_consent_view()
     {
-        (new CookieConsent)->handle(request(), function(){ return ;});
+        (new CookieConsent)->handle(request(), function () {
+            return ;
+        });
         
         $html = view('layout')->render();
 
@@ -30,7 +31,9 @@ class ConsentTest extends TestCase
     public function it_will_not_show_the_cookie_consent_view_when_the_package_is_disabled()
     {
         $this->app['config']->set('cookie-consent.enabled', false);
-        (new CookieConsent)->handle(request(), function(){ return ;});
+        (new CookieConsent)->handle(request(), function () {
+            return ;
+        });
         $html = view('layout')->render();
 
         $this->assertConsentDialogIsNotDisplayed($html);
@@ -40,7 +43,9 @@ class ConsentTest extends TestCase
     public function it_will_not_show_the_cookie_consent_view_when_the_user_has_already_consented()
     {
         request()->cookies->set(config('cookie-consent.cookie_name'), cookie(config('cookie-consent.cookie_name'), 1));
-        (new CookieConsent)->handle(request(), function(){ return ;});
+        (new CookieConsent)->handle(request(), function () {
+            return ;
+        });
         $html = view('layout')->render();
 
         $this->assertConsentDialogIsNotDisplayed($html);

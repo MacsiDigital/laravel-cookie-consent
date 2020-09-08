@@ -29,7 +29,7 @@ class InstallCommand extends Command
     public function handle()
     {
         $this->comment('Publishing Cookie Consent Assets and Configs...');
-        $this->callSilent('vendor:publish', ['--provider' => 'MacsiDigital\CookieConsent\Providers\CookieConsentServiceProvider']);    
+        $this->callSilent('vendor:publish', ['--provider' => 'MacsiDigital\CookieConsent\Providers\CookieConsentServiceProvider']);
         $this->info('Cookie consent installed successfully.');
     }
 }
