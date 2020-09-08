@@ -1,8 +1,22 @@
 # Laravel package for Cookie Consent
 
-A little package to handle cookie consent.  All EU sites or sites targeted at EU citizens must comply with the most crazy european law of all, requesting consent to add cookies to the users comupter.
+## A little package for the EU cookie consent law 
+ 
+![Header Image](https://github.com/MacsiDigital/repo-design/raw/master/laravel-eloquent-cookie-consent/header.png)
 
-### Installation
+<p align="center">
+ <a href="https://github.com/MacsiDigital/laravel-eloquent-cookie-consent/actions?query=workflow%3Atests"><img src="https://github.com/MacsiDigital/laravel-eloquent-cookie-consent/workflows/Run%20tests/badge.svg" style="max-width:100%;" alt="tests badge"></a>
+ <a href="https://packagist.org/packages/macsidigital/laravel-eloquent-cookie-consent"><img src="https://img.shields.io/packagist/v/macsidigital/laravel-eloquent-cookie-consent.svg?style=flat-square" alt="version badge"/></a>
+ <a href="https://packagist.org/packages/macsidigital/laravel-eloquent-cookie-consent"><img src="https://img.shields.io/packagist/dt/macsidigital/laravel-eloquent-cookie-consent.svg?style=flat-square" alt="downloads badge"/></a>
+</p>
+
+A little package to handle cookie consent.  All EU sites or sites targeted at EU citizens must comply with the european law, requesting consent to add cookies to the users comupter.
+
+## Support us
+
+We invest a lot in creating [open source packages](https://macsidigital.co.uk/open-source), and would be grateful for a [sponsor](https://github.com/sponsors/MacsiDigital) if you make money from your product that uses them.
+
+## Installation
 
 This package can be used in Laravel 6.0 or higher.
 
@@ -12,8 +26,6 @@ You can install the package via composer:
 composer require macsidigital/laravel-cookie-consent
 ```
 
-The service provider will automatically get registered. Or you may manually add the service provider in your config/app.php file.
-
 We then need to install the assets:
 
 ``` bash
@@ -22,7 +34,7 @@ php artisan cookieconsent:install
 
 This will publish a config file, the views and language files
 
-## AJAX Requests and Styling
+### AJAX Requests and Styling
 
 Out of the box we use axios to make the AJAX request, this can be changed by editing the blade template.
 
@@ -42,7 +54,13 @@ To amend the design just go into the resources views folder and amend 'widget.bl
 
 Finally the more info will try to direct to a route '/cookie-policy', you will need to create this route yourself in your routes file, as well as the template file that lists your cookie policy.
 
-### Changelog
+## Testing
+
+``` bash
+composer test
+```
+
+## Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
 
@@ -50,9 +68,9 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 
 Please see [CONTRIBUTING](CONTRIBUTING.md) for details.
 
-### Security
+## Security
 
-If you discover any security related issues, please email colin@macsi.co.uk instead of using the issue tracker.
+If you discover any security-related issues, please email [info@macsi.co.uk](mailto:info@masi.co.uk) instead of using the issue tracker.
 
 ## Credits
 

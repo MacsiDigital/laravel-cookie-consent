@@ -2,7 +2,7 @@
     "name": "macsidigital/laravel-cookie-consent",
     "description": "Laravel cookie consent package",
     "homepage": "https://github.com/MacsiDigital/laravel-cookie-consent",
-    "keywords": ["macsidigital", "laravel-cookie-consent", "cookie-consent", "laravel", "api", "client"],
+    "keywords": ["macsidigital", "laravel-cookie-consent", "cookie-consent", "laravel"],
     "license": "MIT",
     "type": "library",
     "authors": [
@@ -14,11 +14,14 @@
     ],
     "require": {
         "php": "^7.3",
-        "illuminate/support": "^6.0|^7.0"
+        "illuminate/support": "^6.0|^7.0|^8.0"
     },
     "require-dev": {
-        "orchestra/testbench": "^4.0|^5.0",
-        "phpunit/phpunit": "^8.0"
+        "friendsofphp/php-cs-fixer": "^2.16",
+        "orchestra/testbench": "^4.0|^5.0|^6.0",
+        "phpunit/phpunit": "^8.0|^9.0",
+        "psalm/plugin-laravel": "^1.2",
+        "vimeo/psalm": "^3.11"
     },
     "autoload": {
         "psr-4": {
@@ -31,9 +34,10 @@
         }
     },
     "scripts": {
+        "psalm": "vendor/bin/psalm",
         "test": "vendor/bin/phpunit",
-        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
-
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "format": "vendor/bin/php-cs-fixer fix --allow-risky=yes"
     },
     "config": {
         "sort-packages": true

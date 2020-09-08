@@ -1,6 +1,6 @@
 @if($consent_required)
 
-<div id="cookie-consent-banner" class="fixed inset-x-0 {{ config('cookie-consent.banner_position') }}-0">
+<div id="cookie-consent-banner" class="fixed inset-x-0 {{ config('cookie-consent.banner_position') }}-0" style="z-index:99999">
   <div class="bg-blue-600">
     <div class="max-w-screen-xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
       <div class="flex flex-wrap items-center justify-between">
@@ -31,7 +31,7 @@
                 var consentBox = document.getElementById('cookie-consent-banner');
 					consentBox.style.display = 'none'; //or
 					consentBox.style.visibility = 'hidden';
-            });	
+            });
 	}
 </script>
 
